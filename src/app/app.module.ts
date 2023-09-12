@@ -14,6 +14,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './admin/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
