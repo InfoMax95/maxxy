@@ -14,8 +14,10 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './admin/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,17 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     ErrorComponent,
     CategoriesComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
