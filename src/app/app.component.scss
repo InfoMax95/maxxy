@@ -1,0 +1,39 @@
+.navbar {
+  line-height: 60px;
+  .navbar-item {
+    display: inline-block;
+    width: calc(100% / 3);
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 0 0.6rem;
+    .logo {
+      font-weight: 900;
+      font-style: italic;
+      color: rgba($color: #ff9977, $alpha: 1.0);
+    }
+    .menu {
+      list-style: none;
+      text-align: center;
+      .menu-item {
+        display: inline-block;
+        padding: 0 1rem;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+    .socials {
+      list-style: none;
+      text-align: end;
+      .link {
+        display: inline-block;
+        padding: 0 0 0 0.6rem;
+        #yt, #linkedin, #gh {
+          color: #fff;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
