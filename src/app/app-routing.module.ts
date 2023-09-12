@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './admin/login/login.component';
 import { AboutComponent } from './components/about/about.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ErrorComponent } from './components/error/error.component';
@@ -10,6 +11,8 @@ const routes: Routes = [
   { path: "homepage", component: HomepageComponent },
   { path: "categories", component: CategoriesComponent },
   { path: "about", component: AboutComponent },
+  // ADMIN SECTION
+  { path: 'admin', component: LoginComponent},
   { path: "not-found", component: ErrorComponent },
   { path: "**", component: ErrorComponent, pathMatch: "full"}
 ];
