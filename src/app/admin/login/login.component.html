@@ -1,19 +1,21 @@
 <div class="login-container">
   <form [formGroup]="form" (ngSubmit)="login()">
     <div class="user-box">
-      <input type="text" name="username" formControlName="username">
       <label>Username</label>
+      <input type="text" name="username" formControlName="username">
     </div>
     <div class="user-box">
-      <input type="password" name="password" formControlName="password">
       <label>Password</label>
+      <input type="password" name="password" formControlName="password">
     </div>
-    <button type="submit">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Submit
-    </button>
+    <div class="buttons">
+      <button type="submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    </div>
   </form>
 </div>
