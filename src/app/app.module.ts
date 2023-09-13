@@ -18,6 +18,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AddPostComponent } from './admin/add-post/add-post.component';
+import { UpdatePostComponent } from './admin/update-post/update-post.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     CategoriesComponent,
     AboutComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddPostComponent,
+    UpdatePostComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ErrorComponent } from './components/error/error.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AddPostComponent } from './admin/add-post/add-post.component';
+import { UpdatePostComponent } from './admin/update-post/update-post.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "homepage", pathMatch: "full" },
@@ -15,12 +17,15 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   // ADMIN SECTION
   { path: 'admin', component: LoginComponent},
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'add-post', component: AddPostComponent },
+  { path: 'update-post/:id', component: UpdatePostComponent },
   {
     path: '',
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
-      { path: 'dashboard', component: DashboardComponent }
+      // { path: 'dashboard', component: DashboardComponent }
     ]
   },
   { path: "not-found", component: ErrorComponent },

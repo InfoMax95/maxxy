@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <div class="buttons">
+    <button class="add" routerLink="add-post">nuovo</button>
+  </div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Titolo</th>
+      <th>Descrizione</th>
+      <th>Azioni</th>
+    </tr>
+    <tr> <!-- ngfor sulla row per i posts-->
+      <td>bbbb</td>
+      <td>bbbb</td>
+      <td>bbbb</td>
+      <td class="actions">
+        <button class="modifica" routerLink="update-post">modifica</button>
+        <button class="elimina" (click)="onDelete($event)">elimina</button>
+      </td>
+    </tr>
+  </table>
+</div>

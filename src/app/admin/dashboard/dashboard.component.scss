@@ -1,0 +1,57 @@
+.dashboard-container {
+  overflow-x: auto;
+  .buttons {
+    justify-content: flex-end;
+    button {
+      margin: 2rem;
+      background-color: rgba($color: rgb(12, 125, 231), $alpha: 1.0);
+      color: #fff;
+      border: none;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+  table {
+    width: 100vw;
+    border: 3px solid #fff;
+    border-collapse: collapse;
+    tr {
+      th, td {
+        border: 2px solid #fff;
+        padding: 8px;
+        text-align: start;
+        &:nth-last-child(1) {
+          width: 20%;
+        }
+        &:nth-child(1) {
+          width: 5%;
+        }
+      }
+      .actions {
+        button {
+          line-height: 20px;
+          padding: 0.5rem 1rem;
+          margin-left: 1rem;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          border: none;
+          border-radius: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+          &:active {
+            opacity: 0.6;
+          }
+        }
+        button.modifica {
+          background-color: yellow;
+        }
+        button.elimina {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
