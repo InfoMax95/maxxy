@@ -2,19 +2,19 @@
   <div class="buttons">
     <button class="add" routerLink="add-post">nuovo</button>
   </div>
-  <table>
+  <table *ngIf="posts">
     <tr>
       <th>ID</th>
       <th>Titolo</th>
       <th>Descrizione</th>
       <th>Azioni</th>
     </tr>
-    <tr> <!-- ngfor sulla row per i posts-->
-      <td>bbbb</td>
-      <td>bbbb</td>
-      <td>bbbb</td>
+    <tr *ngFor="let post of posts"> <!-- ngfor sulla row per i posts-->
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.description}}</td>
       <td class="actions">
-        <button class="modifica" routerLink="update-post/:id">modifica</button>
+        <button class="modifica" routerLink="update-post/{{post.id}}">modifica</button>
         <button class="elimina" (click)="onDelete($event)">elimina</button>
       </td>
     </tr>

@@ -1,11 +1,11 @@
 export interface Post {
-  Id?: number;
-  Title: string;
-  FirstContent: string;
+  id?: number;
+  title: string;
+  firstContent: string;
   SecondContent: string;
   ThirdContent: string;
   Subtitle: string;
-  Description: string;
+  description: string;
   CategoryId: number;
   UserId: number;
   Codes?: Code[];

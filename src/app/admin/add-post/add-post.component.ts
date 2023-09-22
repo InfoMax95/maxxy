@@ -31,12 +31,12 @@ export class AddPostComponent implements OnInit {
     console.log("sto salvando");
     let fieldValue = this.addForm.value;
     const post: Post = {
-      Title: fieldValue["title"],
-      FirstContent: fieldValue["subtitle"],
+      title: fieldValue["title"],
+      firstContent: fieldValue["subtitle"],
       SecondContent: fieldValue["mainContent"],
       ThirdContent: fieldValue["addNotes"],
       Subtitle: fieldValue["insights"],
-      Description: fieldValue["description"],
+      description: fieldValue["description"],
       CategoryId: 1,
       UserId: 1
     }
