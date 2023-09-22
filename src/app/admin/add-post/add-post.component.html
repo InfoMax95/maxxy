@@ -1,1 +1,40 @@
-<p>add-post works!</p>
+<div class="container-form">
+  <form class="input-form" [formGroup]="addForm" (ngSubmit)="onSave()">
+    <div class="input-item">
+      <label for="title">Titolo</label>
+      <input id="title" type="text" formControlName="title">
+    </div>
+    <div class="input-item">
+      <label for="subtitle">Sottotitolo</label>
+      <input id="subtitle" type="text" formControlName="subtitle">
+    </div>
+    <div class="input-item">
+      <label for="description">Descrizione</label>
+      <input id="description" type="text" formControlName="description">
+    </div>
+    <div class="input-item">
+      <label for="main-content">Contenuto principale</label>
+      <textarea id="main-content" name="" rows="4" formControlName="mainContent"></textarea>
+    </div>
+    <div class="input-item">
+      <label for="add-notes">Note aggiuntive</label>
+      <textarea id="add-notes" name="" rows="4" formControlName="addNotes"></textarea>
+    </div>
+    <div class="input-item">
+      <label for="insights">Approfondimenti</label>
+      <textarea id="insights" name="" rows="4" formControlName="insights"></textarea>
+    </div>
+    <!-- <div class="input-item">
+      <label for="code-snippets">Code snippets</label>
+      <textarea id="code-snippets" name="" rows="4" formControlName="codeSnippets"></textarea>
+    </div> -->
+    <!-- <div class="input-item">
+      <label for="image">Scegli una foto</label>
+      <input type="file" name="image" id="image" formControlName="image">
+    </div> -->
+    <div class="buttons">
+      <button type="button" routerLink="/dashboard">Torna alla dashboard</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</div>

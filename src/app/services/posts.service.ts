@@ -1,0 +1,23 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { Post } from '../models/post';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PostsService {
+
+  private baseUrl: string = environment.apiUrl;
+
+  constructor(private http: HttpClient) { }
+
+  public getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.baseUrl}posts`);
+  }
+
+  public insertPost(post: Post): Observable<Post> {
+    return this.http.post<Post>(`${this.baseUrl}posts`, post);
+  }
+}

@@ -17,15 +17,15 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   // ADMIN SECTION
   { path: 'admin', component: LoginComponent},
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'add-post', component: AddPostComponent },
-  { path: 'update-post/:id', component: UpdatePostComponent },
+  { path: "dashboard/add-post", component: AddPostComponent },
   {
     path: '',
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
-      // { path: 'dashboard', component: DashboardComponent }
+      { path: 'dashboard', component: DashboardComponent },
+      // { path: "dashboard/add-post", component: AddPostComponent },
+      { path: "dashboard/update-post/:id", component: UpdatePostComponent }
     ]
   },
   { path: "not-found", component: ErrorComponent },
