@@ -15,7 +15,7 @@
       <td>{{post.description}}</td>
       <td class="actions">
         <button class="modifica" routerLink="update-post/{{post.id}}">modifica</button>
-        <button class="elimina" (click)="onDelete($event)">elimina</button>
+        <button *ngIf="post.id && post.id > 0" class="elimina" (click)="onDelete(post.id)">elimina</button>
       </td>
     </tr>
   </table>

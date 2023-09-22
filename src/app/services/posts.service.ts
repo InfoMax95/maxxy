@@ -20,4 +20,8 @@ export class PostsService {
   public insertPost(post: Post): Observable<Post> {
     return this.http.post<Post>(`${this.baseUrl}posts`, post);
   }
+
+  public deletePost(id: number): Observable<string> {
+    return this.http.delete<string>(`${this.baseUrl}posts?id=${id}`);
+  }
 }
